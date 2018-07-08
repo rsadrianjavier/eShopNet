@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 namespace eShop.Application
 {
     /// <summary>
-    /// Clase genérica de Manager
+    /// Clase genérica de acceso a datos de una entidad
     /// </summary>
+    /// /// <typeparam name="T">Entidad de la que tenemos acceso con esta clase genérica</typeparam>
     public class GenericManager<T>
         where T : class
     {
@@ -66,6 +67,15 @@ namespace eShop.Application
         public T GetById(int id)
         {
             return GetById(new object[] { id });
+        }
+
+        /// <summary>
+        /// Obtiene todas las entidades
+        /// </summary>
+        /// <returns>Entidad si es encontrada</returns>
+        public IQueryable<T> GetAll()
+        {
+            return Context.Set<T>();
         }
     }
 }
