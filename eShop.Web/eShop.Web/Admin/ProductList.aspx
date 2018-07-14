@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
     <br />
-    <table id="productsTable">
+    <table id="productsTable" class="display" style="width:100%">
         <thead>
             <tr>
                 <th>Id</th>

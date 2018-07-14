@@ -45,7 +45,7 @@ C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.Application\bin\Debug\es\Ent
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.Application\bin\Debug\es\EntityFramework.SqlServer.resources.dll
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.Application\bin\Debug\es\Microsoft.AspNet.Identity.Core.resources.dll
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.Application\bin\Debug\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
-C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.Application\obj\Debug\eShop.Application.csprojResolveAssemblyReference.cache
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.Application\obj\Debug\eShop.Application.csprojAssemblyReference.cache
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.Application\obj\Debug\eShop.Application.csproj.CoreCompileInputs.cache
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.Application\obj\Debug\eShop.Application.csproj.CopyComplete
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.Application\obj\Debug\eShop.Application.dll
