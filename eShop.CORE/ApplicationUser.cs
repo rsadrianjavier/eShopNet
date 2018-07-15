@@ -9,7 +9,10 @@ using System.Threading.Tasks;
 
 namespace eShop.CORE
 {
-    // Para agregar datos del usuario, agregue más propiedades a su clase de usuario. Visite https://go.microsoft.com/fwlink/?LinkID=317594 para obtener más información.
+
+    /// <summary>
+    /// Entidad de dominio de usuario
+    /// </summary>
     public class ApplicationUser : IdentityUser
     {
         public ClaimsIdentity GenerateUserIdentity(UserManager<ApplicationUser> manager)
@@ -24,6 +27,11 @@ namespace eShop.CORE
         {
             return Task.FromResult(GenerateUserIdentity(manager));
         }
+
+        /// <summary>
+        /// Código postal
+        /// </summary>
+        public string PostalCode { get; set; }
 
     }
 

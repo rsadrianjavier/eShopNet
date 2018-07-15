@@ -1,0 +1,6 @@
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.IFR\bin\Debug\eShop.IFR.dll
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.IFR\bin\Debug\eShop.IFR.pdb
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.IFR\obj\Debug\eShop.IFR.csprojAssemblyReference.cache
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.IFR\obj\Debug\eShop.IFR.csproj.CoreCompileInputs.cache
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.IFR\obj\Debug\eShop.IFR.dll
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.IFR\obj\Debug\eShop.IFR.pdb

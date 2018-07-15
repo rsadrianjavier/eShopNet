@@ -5,19 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using eShop.DAL;
+using eShop.CORE.Contracts;
 
 namespace eShop.Application
 {
     /// <summary>
     /// Clase manager de Order
     /// </summary>
-    class OrderManager : GenericManager<Order>
+    class OrderManager : GenericManager<Order>, IOrderManager
     {
         /// <summary>
         /// Constructor de la clase Manager de Order
         /// </summary>
         /// <param name="context">Contexto de datos</param>
-        public OrderManager(ApplicationDbContext context) : base(context)
+        public OrderManager(IApplicationDbContext context) : base(context)
         {
         }
 

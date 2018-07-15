@@ -1,19 +1,15 @@
 ﻿using eShop.CORE;
+using eShop.CORE.Contracts;
 using Microsoft.AspNet.Identity.EntityFramework;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace eShop.DAL
 {
 
     /// <summary>
-    /// Contexto de datos
+    /// Clase de contexto de datos de Entity Framework
     /// </summary>
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
     {
         /// <summary>
         /// Constructor por defecto de la clase
@@ -46,6 +42,21 @@ namespace eShop.DAL
         /// Coleccion persistible de lineas de pedido
         /// </summary>
         public DbSet<OrderLine> OrderLines { get; set; }
+
+        /// <summary>
+        /// Coleccion persistible de usuarios
+        /// </summary>
+        public DbSet<IdentityUser> AspNetUsers { get; set; }
+
+        /// <summary>
+        /// Coleccion persistible de roles
+        /// </summary>
+        public DbSet<IdentityRole> AspNetRoles { get; set; }
+
+        /// <summary>
+        /// Coleccion persistible de roles de usuario
+        /// </summary>
+        public DbSet<IdentityUserRole> AspNetUserRoles { get; set; }
 
     }
 

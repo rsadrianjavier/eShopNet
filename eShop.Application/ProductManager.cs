@@ -5,19 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using eShop.DAL;
+using eShop.CORE.Contracts;
 
 namespace eShop.Application
 {
     /// <summary>
     /// Manager de Product
     /// </summary>
-    public class ProductManager : GenericManager<Product>
+    public class ProductManager : GenericManager<Product>, IProductManager
     {
         /// <summary>
         /// Constructor del manager de Product
         /// </summary>
         /// <param name="context">Contexto de datos</param>
-        public ProductManager(ApplicationDbContext context) : base(context)
+        public ProductManager(IApplicationDbContext context) : base(context)
         {
         }
 

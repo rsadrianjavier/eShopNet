@@ -1,4 +1,5 @@
-﻿using eShop.DAL;
+﻿using eShop.CORE.Contracts;
+using eShop.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,19 +12,19 @@ namespace eShop.Application
     /// Clase genérica de acceso a datos de una entidad
     /// </summary>
     /// /// <typeparam name="T">Entidad de la que tenemos acceso con esta clase genérica</typeparam>
-    public class GenericManager<T>
+    public class GenericManager<T> : IGenericManager<T>
         where T : class
     {
         /// <summary>
         /// Contexto de datos del manager
         /// </summary>
-        public ApplicationDbContext Context { get; private set; }
+        public IApplicationDbContext Context { get; private set; }
 
         /// <summary>
         /// Constructor del manager
         /// </summary>
         /// <param name="context">Contexto de datos</param>
-        public GenericManager(ApplicationDbContext context)
+        public GenericManager(IApplicationDbContext context)
         {
             Context = context;
         }
@@ -62,7 +63,7 @@ namespace eShop.Application
         /// <summary>
         /// Obtiene una entidad por su clave int
         /// </summary>
-        /// <param name="id">Claves del objeto</param>
+        /// <param name="id">Identificador</param>
         /// <returns>Entidad si es encontrada</returns>
         public T GetById(int id)
         {
