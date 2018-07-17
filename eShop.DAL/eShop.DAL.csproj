@@ -58,6 +58,10 @@
     <Compile Include="Migrations\201803171654118_RetomandoProyecto.Designer.cs">
       <DependentUpon>201803171654118_RetomandoProyecto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807171649463_EntidadesUserBorradas.cs" />
+    <Compile Include="Migrations\201807171649463_EntidadesUserBorradas.Designer.cs">
+      <DependentUpon>201807171649463_EntidadesUserBorradas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -74,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201803171654118_RetomandoProyecto.resx">
       <DependentUpon>201803171654118_RetomandoProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807171649463_EntidadesUserBorradas.resx">
+      <DependentUpon>201807171649463_EntidadesUserBorradas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

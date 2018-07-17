@@ -18,12 +18,14 @@ namespace eShop.Web.Public
 
         public void ProcessRequest(HttpContext context)
         {
-            /*var iDisplayLength = int.Parse(context.Request["iDisplayLength"]);
-            var iDisplayStart = int.Parse(context.Request["iDisplayStart"]);
-            var sSearch = context.Request["sSearch"];
-            var iSortDir = context.Request["sSortDir_0"];
-            var iSortCol = context.Request["iSortCol_0"];
-            var sSortColum = context.Request.QueryString["mDataProp_" + iSortCol];*/
+            var iDisplayLength = int.Parse(context.Request["length"]);
+            var iDisplayStart = int.Parse(context.Request["start"]);
+            var sSearch = context.Request["search[value]"];
+            var iSortDir = context.Request["order[0][dir]"];
+            var iSortCol = context.Request["order[0][column]"];
+            var sSortColum = context.Request["columns[" + iSortCol + "][data]"];
+
+            //var sSortColum = context.Request.QueryString["mDataProp_" + iSortCol];
 
             ApplicationDbContext contextdb = new ApplicationDbContext();
             ProductManager productManager = new ProductManager(contextdb);
@@ -39,7 +41,7 @@ namespace eShop.Web.Public
                     Stock = p.Stock
                 });
             #endregion
-            /*
+            
             #region Filter
             if (!string.IsNullOrWhiteSpace(sSearch))
             {
@@ -57,7 +59,7 @@ namespace eShop.Web.Public
                         .OrderBy(sSortColum + " " + iSortDir)
                         .Skip(iDisplayStart)
                         .Take(iDisplayLength);
-            #endregion*/
+            #endregion
             var result = new
             {
                 iTotalRecords = allProducts.Count(),

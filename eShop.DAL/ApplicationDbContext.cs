@@ -43,21 +43,6 @@ namespace eShop.DAL
         /// </summary>
         public DbSet<OrderLine> OrderLines { get; set; }
 
-        /// <summary>
-        /// Coleccion persistible de usuarios
-        /// </summary>
-        public DbSet<IdentityUser> AspNetUsers { get; set; }
-
-        /// <summary>
-        /// Coleccion persistible de roles
-        /// </summary>
-        public DbSet<IdentityRole> AspNetRoles { get; set; }
-
-        /// <summary>
-        /// Coleccion persistible de roles de usuario
-        /// </summary>
-        public DbSet<IdentityUserRole> AspNetUserRoles { get; set; }
-
     }
 
 }
