@@ -51,9 +51,20 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/Public/ProductList">Catálogo</a></li>
-                        <li><a runat="server" href="~/About">Acerca de</a></li>
-                        <li><a runat="server" href="~/Contact">Contacto</a></li>
+                        <li><a visible="true" id="linkCatalogue" runat="server" href="~/Public/Catalogue">Catálogo</a></li>
+                        <li><a visible="true" id="linkCart" runat="server" href="~/Public/Cart">Carrito</a></li>
+
+                        <li><a visible="false" id="linkAdminProductList" runat="server" href="~/Admin/ProductList">Gestión de productos</a></li>
+                        <li><a visible="false" id="linkAdminOrderList" runat="server" href="~/Admin/OrderList">Gestión de pedidos</a></li>
+                        <li><a visible="false" id="linkAdminUserList" runat="server" href="~/Admin/UserList">Gestión de usuarios</a></li>
+                        <li><a visible="false" id="linkAdminRoleList" runat="server" href="~/Admin/RoleList">Gestión de roles</a></li>
+
+                        <li><a visible="false" id="linkClientOrderList" runat="server" href="~/Client/OrderList">Mis pedidos</a></li>
+                        <li><a visible="false" id="linkUserData" runat="server" href="~/Account/Manage">Datos de Usuario</a></li>
+
+                        <li><a visible="true" id="linkAbout" runat="server" href="~/About">Acerca de</a></li>
+                        <li><a visible="true" id="linkContact" runat="server" href="~/Contact">Contacto</a></li>
+                        
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>

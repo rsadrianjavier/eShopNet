@@ -69,7 +69,23 @@ namespace eShop.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Page.User.IsInRole("Admin"))
+            {
+                linkAdminProductList.Visible = true;
+                linkAdminOrderList.Visible = true;
+                linkAdminUserList.Visible = true;
+                linkAdminRoleList.Visible = true;
+                linkCatalogue.Visible = false;
+                linkCart.Visible = false;
+                linkAbout.Visible = false;
+                linkContact.Visible = false;
+            }
 
+            if (Page.User.IsInRole("Client"))
+            {
+                linkClientOrderList.Visible = true;
+                linkUserData.Visible = true;
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)

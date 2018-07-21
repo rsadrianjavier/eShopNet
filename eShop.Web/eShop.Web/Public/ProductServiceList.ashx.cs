@@ -55,10 +55,13 @@ namespace eShop.Web.Public
             #endregion
 
             #region Paginate
-            products = products
+            if (!string.IsNullOrWhiteSpace(sSortColum))
+            {
+                products = products
                         .OrderBy(sSortColum + " " + iSortDir)
                         .Skip(iDisplayStart)
                         .Take(iDisplayLength);
+            }
             #endregion
             var result = new
             {

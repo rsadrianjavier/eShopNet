@@ -33,7 +33,7 @@ namespace eShop.Web.Admin
                 };
                 productManager.Add(producto);
                 productManager.Context.SaveChanges();
-                Response.Redirect("ProductsView"); 
+                Response.Redirect("ProductList"); 
                 // TODO: Pagina sin crear
             }
             catch(Exception ex)
