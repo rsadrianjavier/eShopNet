@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace eShop.CORE
 {
     /// <summary>
-    /// Entidad de dominio de pedidos
+    /// Entidad de dominio de pedido
     /// </summary>
     public class Order
     {
@@ -18,6 +18,11 @@ namespace eShop.CORE
         /// </summary>
         [Key]
         public int OrderId { get; set; }
+
+        /// <summary>
+        /// Estado del pedido
+        /// </summary>
+        public OrderStatus Status { get; set; }
 
         /// <summary>
         /// Fecha del pedido
@@ -40,5 +45,15 @@ namespace eShop.CORE
         /// </summary>
         public virtual List<OrderLine> OrderLines { get; set; }
         //virtual indica que es otra entidad
+
+        /// <summary>
+        /// Dirección de envío
+        /// </summary>
+        public Address Address { get; set; }
+        /// <summary>
+        /// Identificador de direccion de envio
+        /// </summary>
+        [ForeignKey("Address")]
+        public int ShippingAddress_Id { get; set; }
     }
 }

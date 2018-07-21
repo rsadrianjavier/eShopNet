@@ -34,9 +34,18 @@ namespace eShop.CORE
         public string Description { get; set; }
 
         /// <summary>
+        /// Colección de Documentos del producto, imágenes, videos, etc
+        /// </summary>
+        public virtual List<Document> Documents { get; set; }
+
+        /// <summary>
         /// Número de unidades del producto
         /// </summary>
         public int Stock { get; set; }
 
+        /// <summary>
+        /// Indica si el producto está disponible
+        /// </summary>
+        public bool Available { get; set; }
     }
 }

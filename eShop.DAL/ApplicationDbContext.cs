@@ -5,12 +5,16 @@ using System.Data.Entity;
 
 namespace eShop.DAL
 {
+    //Enable-Migrations
+    //Add-Migration "name xxxxx" -StartUpProjectName "eShop.Web" -ConnectionStringName "DefaultConnection" -Verbose
+    //Update-Database -StartUpProjectName "eShop.Web" -ConnectionStringName "DefaultConnection" -Verbose 
 
     /// <summary>
     /// Clase de contexto de datos de Entity Framework
     /// </summary>
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
     {
+
         /// <summary>
         /// Constructor por defecto de la clase
         /// </summary>
@@ -43,6 +47,20 @@ namespace eShop.DAL
         /// </summary>
         public DbSet<OrderLine> OrderLines { get; set; }
 
+        /// <summary>
+        /// Colección persistible de carrito de compra
+        /// </summary>
+        public DbSet<Cart> Carts { get; set; }
+
+        /// <summary>
+        /// Colección persistible de direcciones
+        /// </summary>
+        public DbSet<Address> Addresses { get; set; }
+
+        /// <summary>
+        /// Colección persistible de documentos
+        /// </summary>
+        public DbSet<Document> Documents { get; set; }
     }
 
 }
