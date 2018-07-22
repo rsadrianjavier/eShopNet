@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="Editar Producto" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductEdit.aspx.cs" Inherits="eShop.Web.Admin.ProductEdit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-horizontal">
-        <h4>Editar producto</h4>
+        <h2><%: Title %></h2>
+        <br />
         <asp:ValidationSummary runat="server" id="ValidationSummary1" CssClass="alert alert-danger"/>
         <div class="form-group">
             <asp:Label Text="Nombre:" runat="server" AssociatedControlID="txtNombre" CssClass="col-md-3"/>

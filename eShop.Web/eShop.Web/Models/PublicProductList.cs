@@ -17,6 +17,6 @@ namespace eShop.Web.Models
 
         public string Description { get; set; }
 
-        public int Stock { get; set; }
+        public bool Available { get; set; }
     }
 }

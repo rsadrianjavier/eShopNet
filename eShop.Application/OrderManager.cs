@@ -12,7 +12,7 @@ namespace eShop.Application
     /// <summary>
     /// Clase manager de Order
     /// </summary>
-    class OrderManager : GenericManager<Order>, IOrderManager
+    public class OrderManager : GenericManager<Order>, IOrderManager
     {
         /// <summary>
         /// Constructor de la clase Manager de Order

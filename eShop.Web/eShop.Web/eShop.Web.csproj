@@ -194,13 +194,14 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\OrderEdit.aspx" />
     <Content Include="Admin\OrderList.aspx" />
     <Content Include="Admin\ProductCreate.aspx" />
     <Content Include="Admin\ProductEdit.aspx" />
     <Content Include="Admin\ProductList.aspx" />
     <Content Include="Admin\RoleList.aspx" />
     <Content Include="Admin\UserCreate.aspx" />
+    <Content Include="Admin\UserEdit.aspx" />
     <Content Include="Admin\UserList.aspx" />
     <Content Include="Client\OrderList.aspx" />
     <Content Include="Contact.aspx" />
@@ -227,7 +228,10 @@
     <Content Include="Admin\ProductServiceList.ashx" />
     <Content Include="Public\ProductServiceList.ashx" />
     <Content Include="Admin\UserServiceList.ashx" />
+    <Content Include="Admin\OrderServiceList.ashx" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Public\CartService.ashx" />
+    <Content Include="Public\CatalogueService.ashx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -369,12 +373,12 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Admin\OrderEdit.aspx.cs">
+      <DependentUpon>OrderEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Admin\OrderEdit.aspx.designer.cs">
+      <DependentUpon>OrderEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\OrderList.aspx.cs">
       <DependentUpon>OrderList.aspx</DependentUpon>
@@ -382,6 +386,9 @@
     </Compile>
     <Compile Include="Admin\OrderList.aspx.designer.cs">
       <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrderServiceList.ashx.cs">
+      <DependentUpon>OrderServiceList.ashx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ProductCreate.aspx.cs">
       <DependentUpon>ProductCreate.aspx</DependentUpon>
@@ -420,6 +427,13 @@
     </Compile>
     <Compile Include="Admin\UserCreate.aspx.designer.cs">
       <DependentUpon>UserCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserEdit.aspx.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserEdit.aspx.designer.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\UserList.aspx.cs">
       <DependentUpon>UserList.aspx</DependentUpon>
@@ -466,6 +480,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AdminOrderList.cs" />
     <Compile Include="Models\AdminUserList.cs" />
     <Compile Include="Models\PublicProductList.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -478,12 +493,18 @@
     <Compile Include="Public\Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Public\CartService.ashx.cs">
+      <DependentUpon>CartService.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Public\Catalogue.aspx.cs">
       <DependentUpon>Catalogue.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Public\Catalogue.aspx.designer.cs">
       <DependentUpon>Catalogue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\CatalogueService.ashx.cs">
+      <DependentUpon>CatalogueService.ashx</DependentUpon>
     </Compile>
     <Compile Include="Public\ProductList.aspx.cs">
       <DependentUpon>ProductList.aspx</DependentUpon>

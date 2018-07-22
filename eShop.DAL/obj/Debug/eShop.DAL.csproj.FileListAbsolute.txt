@@ -44,9 +44,9 @@ C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\bin\Debug\es\Microsoft.A
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.csprojAssemblyReference.cache
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.Migrations.RetomandoProyecto.resources
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.Migrations.EntidadesUserBorradas.resources
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.Migrations.namenuevasEntidades.resources
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.csproj.GenerateResource.cache
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.csproj.CoreCompileInputs.cache
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.csproj.CopyComplete
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.dll
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.pdb
-C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.Migrations.namenuevasEntidades.resources

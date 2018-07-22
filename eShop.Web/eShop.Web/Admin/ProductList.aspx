@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Listado Productos" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductList.aspx.cs" Inherits="eShop.Web.Admin.ProductList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <h2><%: Title %></h2>
     <br />
     <table id="productsTable" class="display" style="width:100%">
         <thead>

@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Listado Usuarios" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UserList.aspx.cs" Inherits="eShop.Web.Admin.UserList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <h2><%: Title %></h2>
     <br />
     <table id="productsTable" class="display" style="width:100%">
         <thead>
@@ -12,7 +13,7 @@
 
                 <th>Rol</th>
 
-                <th><asp:Button Text="Crear nuevo usuario" PostBackUrl="~/Admin/UserCreate.aspx" class="btn btn-primary" runat="server" /></th>
+                <th><asp:Button Text="Crear nuevo usuario" PostBackUrl="~/Account/Register.aspx" class="btn btn-primary" runat="server" /></th>
             </tr>
         </thead>
     </table>
