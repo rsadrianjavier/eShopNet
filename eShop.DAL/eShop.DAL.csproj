@@ -66,6 +66,10 @@
     <Compile Include="Migrations\201807212308459_name nuevasEntidades.Designer.cs">
       <DependentUpon>201807212308459_name nuevasEntidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807251947240_name ImageProduct.cs" />
+    <Compile Include="Migrations\201807251947240_name ImageProduct.Designer.cs">
+      <DependentUpon>201807251947240_name ImageProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -88,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807212308459_name nuevasEntidades.resx">
       <DependentUpon>201807212308459_name nuevasEntidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807251947240_name ImageProduct.resx">
+      <DependentUpon>201807251947240_name ImageProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

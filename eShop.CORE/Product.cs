@@ -47,5 +47,10 @@ namespace eShop.CORE
         /// Indica si el producto está disponible
         /// </summary>
         public bool Available { get; set; }
+
+        /// <summary>
+        /// Indica si el producto está disponible
+        /// </summary>
+        public Byte[] Image { get; set; }
     }
 }

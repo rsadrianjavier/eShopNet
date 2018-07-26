@@ -18,5 +18,9 @@ namespace eShop.Web.Models
         public string Description { get; set; }
 
         public int Stock { get; set; }
+
+        public Byte[] Image { get; set; }
+
+
     }
 }

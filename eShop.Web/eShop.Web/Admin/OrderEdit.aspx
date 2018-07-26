@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Editar Pedido" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="OrderEdit.aspx.cs" Inherits="eShop.Web.Admin.OrderEdit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
         <div class="form-horizontal">
-        <h2><%: Title %></h2>
+        <h2 class='card-text text-center alert alert-danger'><%: Title %></h2>
         <br />
         <asp:ValidationSummary runat="server" id="ValidationSummary1" CssClass="alert alert-danger"/>
         <div class="form-group">

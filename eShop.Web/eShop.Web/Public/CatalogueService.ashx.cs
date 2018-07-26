@@ -30,7 +30,8 @@ namespace eShop.Web.Public
                     ProductName = p.ProductName,
                     Price = p.Price,
                     Description = p.Description,
-                    Stock = p.Stock
+                    Stock = p.Stock,
+                    Image = p.Image
                 });
             #endregion
 

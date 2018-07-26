@@ -207,6 +207,15 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\1.jpg" />
+    <Content Include="Content\Images\2.jpg" />
+    <Content Include="Content\Images\3.jpg" />
+    <Content Include="Content\Images\4.jpg" />
+    <Content Include="Content\Images\5.jpg" />
+    <Content Include="Content\Images\6.jpg" />
+    <Content Include="Content\Images\7.jpg" />
+    <Content Include="Content\Images\8.jpg" />
+    <Content Include="Content\Images\9.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -223,6 +232,7 @@
     <Content Include="Public\Cart.aspx" />
     <Content Include="Public\Catalogue.aspx" />
     <Content Include="Public\ProductList.aspx" />
+    <Content Include="Public\ProductView.aspx" />
     <Content Include="Public\Web.config" />
     <Content Include="Client\Web.config" />
     <Content Include="Admin\ProductServiceList.ashx" />
@@ -515,6 +525,13 @@
     </Compile>
     <Compile Include="Public\ProductServiceList.ashx.cs">
       <DependentUpon>ProductServiceList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\ProductView.aspx.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\ProductView.aspx.designer.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

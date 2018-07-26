@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Crear Producto" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductCreate.aspx.cs" Inherits="eShop.Web.Admin.ProductCreate" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-horizontal">
-        <h2><%: Title %></h2>
+        <h2 class='card-text text-center alert alert-danger'><%: Title %></h2>
         <hr />
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert alert-danger"/>
         <div class="form-group">
