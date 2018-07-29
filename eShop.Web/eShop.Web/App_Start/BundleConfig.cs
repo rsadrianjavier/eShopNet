@@ -34,6 +34,10 @@ namespace eShop.Web
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
 
+            // Scripts para Carrito
+            bundles.Add(new ScriptBundle("~/bundles/cart").Include(
+                            "~/Scripts/cart.js"));
+
             ScriptManager.ScriptResourceMapping.AddDefinition(
                 "respond",
                 new ScriptResourceDefinition

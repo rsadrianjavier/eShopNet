@@ -36,3 +36,16 @@ input[type="select"] {
         padding: 0;
     }
 }
+
+
+.shopping-cart {
+    display: inline-block;
+    background: url('http://cdn1.iconfinder.com/data/icons/jigsoar-icons/24/_cart.png') no-repeat 0 0;
+    width: 30px;
+    height: 30px;
+    margin: 10px 10px 0 0;
+}
+
+.transparent {
+    background-color: transparent;
+}
