@@ -23,7 +23,7 @@
                         producto.setAttribute("class", "col-12 col-sm-6 col-md-4");
                         producto.innerHTML = 
                                                 "<div class='card' style='width: 18rem;margin-top:50px'>" +
-                                                    "<img class='card-img-top Image_" + productos[n].ProductId + ".jpg' src='../Content/Images/" + productos[n].ProductId + ".jpg' alt='Card image cap'>" +
+                                                    "<img class='card-img-top Image_" + productos[n].ProductId + "' src='../Content/Images/" + productos[n].ProductId + ".jpg' alt='Card image cap'>" +
                                                     "<div class='card-body'>" +
                                                         " <h5 class='card-title text-center'><b>" + productos[n].ProductName + "</b></h5>     " +   
                                                         "<p class='card-text text-center alert alert-danger'>" + productos[n].Price + " €</p>" +

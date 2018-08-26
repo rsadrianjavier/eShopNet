@@ -65,7 +65,7 @@
                         <li><a visible="true" id="linkAbout" runat="server" href="~/About">Acerca de</a></li>
                         <li><a visible="true" id="linkContact" runat="server" href="~/Contact">Contacto</a></li>
 
-                        <li style="padding-left:15px"><i class="shopping-cart"><span class="badge badge-light transparent cartItems">55</span></i></li>
+                        <li style="padding-left:15px"><i class="shopping-cart"><span class="badge badge-light transparent cartItems"></span></i></li>
                         
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
@@ -95,10 +95,13 @@
                 <p>&copy; <%: DateTime.Now.Year %> - Adrián Javier Rodríguez Sánchez</p>
             </footer>
         </div>
-    </form>
+    </form>  
+
+    <script src="/Scripts/cart.js"></script>
+
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-      crossorigin="anonymous">
-    </script>
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+
 </body>
 </html>

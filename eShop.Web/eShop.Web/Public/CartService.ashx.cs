@@ -26,7 +26,7 @@ namespace eShop.Web.Public
 
 
             context.Response.ContentType = "texto/normal";
-            context.Response.Write("Hola a todos");
+            context.Response.Write(8);
         }
 
 

@@ -4,7 +4,7 @@
 	license: https://www.opensource.org/licenses/mit-license.php
 */
 
-$('.add-to-cart').on('click', function () {
+$(document).on('click', ".add-to-cart", function () {
     var productId = $(this).data("id");
     $.ajax({
         type: "POST",
