@@ -6,7 +6,7 @@
     <h2 class='card-text text-center alert alert-danger'><%: Title %>.</h2>
 
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <section id="loginForm">
                 <div class="form-horizontal">
                     <h4>Utilice una cuenta local para iniciar sesión.</h4>
@@ -56,10 +56,5 @@
             </section>
         </div>
 
-        <div class="col-md-4">
-            <section id="socialLoginForm">
-                <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
-            </section>
-        </div>
     </div>
 </asp:Content>

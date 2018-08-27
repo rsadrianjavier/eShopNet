@@ -1,9 +1,11 @@
 ﻿using eShop.Application;
+using eShop.CORE;
 using eShop.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Providers.Entities;
 
 namespace eShop.Web.Public
 {
@@ -12,39 +14,82 @@ namespace eShop.Web.Public
     /// </summary>
     public class CartService : IHttpHandler
     {
+        ApplicationDbContext contextdb = new ApplicationDbContext();
+
 
         public void ProcessRequest(HttpContext context)
         {
-            ApplicationDbContext contextdb = new ApplicationDbContext();
+            CartManager cartManager = new CartManager(contextdb);
             ProductManager productManager = new ProductManager(contextdb);
 
+            var productId = context.Request["productId"];
 
-/*
-            var count = AddProduct(productId);
-            return Content(count.ToString());
-  */      
-
+            var count = AddProduct(Int32.Parse(productId));
 
             context.Response.ContentType = "texto/normal";
-            context.Response.Write(8);
+            context.Response.Write(count.ToString());
         }
 
 
-        /*private int AddProduct(int productId, int quantity = 1)
+        private int AddProduct(int productId, int quantity = 1)
         {
+            CartManager cartManager = new CartManager(contextdb);
+            ProductManager productManager = new ProductManager(contextdb);
 
-            //Dictionary<int, int> cart = Session["CartItem"] as Dictionary<int, int>;
-            if (cart == null)
-                cart = new Dictionary<int, int>();
-            if (cart.ContainsKey(productId))
-                cart[productId] = cart[productId] + quantity;
-            else
-                cart.Add(productId, 1);
+            if ( User.Identity.IsAuthenticated){
 
-            //Session["CartItem"] = cart;
+                if(!cartManager.getCarritoByUsuarioId(Context.User.Identity.GetUserId())){
 
-            return cart.Sum(e => e.Value);
-        }*/
+                    Cart cart = new Cart(UsuarioId);
+
+                } else {
+                    Cart cart = cartManager.getCarritoByUsuarioId(UsuarioId);
+                }
+
+                if (carrito cotiene producto) {
+
+                    cantidadProducto = cantidadProducto + quantity;
+
+                } else { 
+
+                    OrderLine cartLine = new CartLine
+                        {
+                            ProductId = productId,
+                            Price = int.Parse(txtPrecio.Text),
+                            Description = txtDescripcion.Text,
+                            Stock = int.Parse(TextBoxStock.Text)
+                        };
+
+                    cartManager.Add(cartLine);
+
+                    productManager.Context.SaveChanges();
+                }
+
+                CarritoUsuarioBBDD = cart;
+
+                return 1;
+
+            } else {
+
+                if(!cartManager.getCarritoBySesionID(Session["id"])) {
+
+                    Cart cart = new Cart(SesionId);
+                }
+
+                if (carrito contiene CartLine de Producto){
+                    cantidadProducto = cantidadProducto + quantity;
+
+                } else {
+
+                    //Añadimos producto al carrito
+                }
+
+                Session["CartItem"] = cart;
+
+                return 1;
+            }
+            
+        }
 
         public bool IsReusable
         {

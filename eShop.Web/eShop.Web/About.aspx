@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="eShop.Web.About" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Acerca de</h2>
+    <h2 class='card-text text-center alert alert-danger'>Acerca de</h2>
+    <hr />
     <h3>Trabajo Obligatorio</h3>
     <p>Tienda Online simple que como mínimo debe tener lo siguiente:</p><p> 
         Casos de uso desde los siguientes roles:</p><p>
