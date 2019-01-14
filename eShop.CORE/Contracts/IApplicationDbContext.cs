@@ -10,6 +10,7 @@ namespace eShop.CORE.Contracts
         DbSet<OrderLine> OrderLines { get; set; }
         DbSet<Order> Orders { get; set; }
         DbSet<Product> Products { get; set; }
+        DbSet<Cart> Carts { get; set; }
 
         int SaveChanges();
         DbEntityEntry Entry(object entity);

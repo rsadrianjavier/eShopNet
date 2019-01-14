@@ -6,25 +6,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Providers.Entities;
+using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace eShop.Web.Public
 {
     /// <summary>
     /// Descripción breve de CartService
     /// </summary>
-    public class CartService : IHttpHandler
+    public class CartService : System.Web.UI.Page, IHttpHandler
     {
         ApplicationDbContext contextdb = new ApplicationDbContext();
 
 
-        public void ProcessRequest(HttpContext context)
+        override public void ProcessRequest(HttpContext context)
         {
             CartManager cartManager = new CartManager(contextdb);
             ProductManager productManager = new ProductManager(contextdb);
 
-            var productId = context.Request["productId"];
 
-            var count = AddProduct(Int32.Parse(productId));
+            int productId = int.Parse(context.Request["productId"]);
+
+            var count = AddProduct(productId);
 
             context.Response.ContentType = "texto/normal";
             context.Response.Write(count.ToString());
@@ -35,60 +39,74 @@ namespace eShop.Web.Public
         {
             CartManager cartManager = new CartManager(contextdb);
             ProductManager productManager = new ProductManager(contextdb);
+            UserManager<ApplicationUser> userManager = new UserManager<ApplicationUser>( new UserStore<ApplicationUser>(contextdb));
+            ApplicationUser currentUser = userManager.FindByIdAsync(User.Identity.GetUserId()).Result;
 
-            if ( User.Identity.IsAuthenticated){
+            if (Context.User.Identity.IsAuthenticated)
+            {
+                //IQueryable<CORE.Cart> carritoPrevio = cartManager.GetCarritoByUsuarioId(Context.User.Identity.GetUserId());
+                IQueryable<CORE.Cart> carritoPrevio = cartManager.GetCarritoByUsuarioId(currentUser.Id);
 
-                if(!cartManager.getCarritoByUsuarioId(Context.User.Identity.GetUserId())){
+                List<CORE.Cart> cart;
+                CORE.Cart producto = new CORE.Cart();
 
-                    Cart cart = new Cart(UsuarioId);
+                if (carritoPrevio == null)
+                {
+                    cart = new List<CORE.Cart>();
 
-                } else {
-                    Cart cart = cartManager.getCarritoByUsuarioId(UsuarioId);
+                    producto.Client = currentUser;
+                    producto.Product_Id = productId;
+                    producto.Quantity = quantity;
+
+                    cart.Add(producto);
                 }
+                else
+                {
+                    cart = carritoPrevio.ToList();
 
-                if (carrito cotiene producto) {
-
-                    cantidadProducto = cantidadProducto + quantity;
-
-                } else { 
-
-                    OrderLine cartLine = new CartLine
+                    foreach (CORE.Cart item in cart)
+                    {
+                        if (item.Product_Id.Equals(productId))
                         {
-                            ProductId = productId,
-                            Price = int.Parse(txtPrecio.Text),
-                            Description = txtDescripcion.Text,
-                            Stock = int.Parse(TextBoxStock.Text)
-                        };
+                            producto.Client = currentUser;
+                            producto.Product_Id = productId;
+                            producto.Quantity = item.Quantity + quantity;
 
-                    cartManager.Add(cartLine);
-
-                    productManager.Context.SaveChanges();
+                            cart.Add(producto);
+                        }
+                    }
                 }
 
-                CarritoUsuarioBBDD = cart;
+                cartManager.Add(producto);
+                cartManager.Context.SaveChanges();
 
-                return 1;
+                //CarritoUsuarioBBDD = cart;
 
-            } else {
+                return cartManager.GetCarritoByUsuarioId(currentUser.Id).Count();
 
-                if(!cartManager.getCarritoBySesionID(Session["id"])) {
+            }
+            else
+            {
 
-                    Cart cart = new Cart(SesionId);
-                }
+                //if (!cartManager.GetCarritoBySesionId(Session["id"]))
+                //{
 
-                if (carrito contiene CartLine de Producto){
-                    cantidadProducto = cantidadProducto + quantity;
+                //    List<Cart> cart = new List<Cart>(SesionId);
+                //}
 
-                } else {
+                //if (carrito contiene CartLine de Producto){
+                //    cantidadProducto = cantidadProducto + quantity;
 
-                    //Añadimos producto al carrito
-                }
+                //} else {
 
-                Session["CartItem"] = cart;
+                //    //Añadimos producto al carrito
+                //}
+
+                //Session["CartItem"] = cart;
 
                 return 1;
             }
-            
+
         }
 
         public bool IsReusable

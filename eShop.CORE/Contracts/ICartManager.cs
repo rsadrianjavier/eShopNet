@@ -9,5 +9,7 @@ namespace eShop.CORE.Contracts
 
     public interface ICartManager : IGenericManager<Cart>
     {
+        IQueryable<Cart> GetCarritoByUsuarioId(string clientId);
+        IQueryable<Cart> GetCarritoBySesionId(string sesionId);
     }
 }
