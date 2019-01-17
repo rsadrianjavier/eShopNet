@@ -70,6 +70,18 @@
     <Compile Include="Migrations\201807251947240_name ImageProduct.Designer.cs">
       <DependentUpon>201807251947240_name ImageProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901161839332_name 1939.cs" />
+    <Compile Include="Migrations\201901161839332_name 1939.Designer.cs">
+      <DependentUpon>201901161839332_name 1939.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901162112154_name xxxxx.cs" />
+    <Compile Include="Migrations\201901162112154_name xxxxx.Designer.cs">
+      <DependentUpon>201901162112154_name xxxxx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901171136489_name xxxx1.cs" />
+    <Compile Include="Migrations\201901171136489_name xxxx1.Designer.cs">
+      <DependentUpon>201901171136489_name xxxx1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -95,6 +107,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807251947240_name ImageProduct.resx">
       <DependentUpon>201807251947240_name ImageProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901161839332_name 1939.resx">
+      <DependentUpon>201901161839332_name 1939.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901162112154_name xxxxx.resx">
+      <DependentUpon>201901162112154_name xxxxx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901171136489_name xxxx1.resx">
+      <DependentUpon>201901171136489_name xxxx1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

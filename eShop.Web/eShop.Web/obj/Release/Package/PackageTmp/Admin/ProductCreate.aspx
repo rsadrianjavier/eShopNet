@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductCreate.aspx.cs" Inherits="eShop.Web.Admin.ProductCreate" %>
+﻿<%@ Page Title="Crear Producto" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductCreate.aspx.cs" Inherits="eShop.Web.Admin.ProductCreate" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-horizontal">
-        <h1>Crear producto</h1>
+        <h2 class='card-text text-center alert alert-danger'><%: Title %></h2>
         <hr />
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert alert-danger"/>
         <div class="form-group">
@@ -23,7 +23,7 @@
         <div class="form-group">
             <asp:Label ID="LabelDescripcion" runat="server" Text="Descripción" CssClass="col-md-3" AssociatedControlID="txtDescripcion"></asp:Label>
             <div class="col-md9">
-                <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="10"></asp:TextBox>
+                <asp:TextBox ID="txtDescripcion" runat="server" class="form-control" TextMode="MultiLine" Rows="10"></asp:TextBox>
             </div>
         </div>
         <div class="form-group">
@@ -35,7 +35,7 @@
         </div>
         <div class="form-group">
             <div class="col-md1 col-md-offset-3">
-                <asp:Button ID="btnSubmit" runat="server" Text="Crear" CssClass="btn btn-default" OnClick="btnSubmit_Click"/>
+                <asp:Button ID="btnSubmit" runat="server" Text="Crear" class="btn btn-danger" OnClick="btnSubmit_Click"/>
 
             </div>
         </div>

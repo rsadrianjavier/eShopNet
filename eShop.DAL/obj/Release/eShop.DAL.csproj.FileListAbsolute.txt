@@ -23,3 +23,9 @@ C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Release\eShop.DAL.cs
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Release\eShop.DAL.csproj.CopyComplete
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Release\eShop.DAL.dll
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Release\eShop.DAL.pdb
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Release\eShop.DAL.Migrations.EntidadesUserBorradas.resources
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Release\eShop.DAL.Migrations.namenuevasEntidades.resources
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Release\eShop.DAL.Migrations.nameImageProduct.resources
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Release\eShop.DAL.Migrations.name1939.resources
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Release\eShop.DAL.Migrations.namexxxxx.resources
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Release\eShop.DAL.Migrations.namexxxx1.resources

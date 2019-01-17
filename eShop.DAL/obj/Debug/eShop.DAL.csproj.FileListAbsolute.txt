@@ -51,3 +51,6 @@ C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.cspr
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.csproj.CopyComplete
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.dll
 C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.pdb
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.Migrations.name1939.resources
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.Migrations.namexxxxx.resources
+C:\Users\blackpearl\Documents\GitHub\eShopNet\eShop.DAL\obj\Debug\eShop.DAL.Migrations.namexxxx1.resources

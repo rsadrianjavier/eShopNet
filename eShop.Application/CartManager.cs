@@ -28,7 +28,7 @@ namespace eShop.Application
         /// <returns>Todas las lineas del carrito del cliente</returns>
         public IQueryable<Cart> GetCarritoByUsuarioId(string clientId)
         {
-            return Context.Carts .Where(e => e.Client_Id == clientId);
+            return Context.Carts.Where(e => e.Client_Id == clientId);
         }
 
         /// <summary>

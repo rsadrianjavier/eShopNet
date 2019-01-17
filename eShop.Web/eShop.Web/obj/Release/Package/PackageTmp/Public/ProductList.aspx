@@ -16,10 +16,16 @@
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript">
         $(document).ready( function () {
-            $('#productsTable').DataTable({
-                'bProcessing': true,
-                'bServeSide': true,
-                'sAjaxSource': '/Public/ProductServiceList.ashx',
+            $('#productsTable').DataTable({                                                
+                "processing": true, // for show progress bar
+                "serverSide": true, // for process server side
+                "filter": true, // this is for disable filter (search box)
+                "orderMulti": false, // for disable multiple column at once
+                "ajax": {
+                    "url": '/Public/ProductServiceList.ashx',
+                    "type": "POST",
+                    "datatype": "json"
+                },
                 "language": {
                     'url': "//cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
                 },
