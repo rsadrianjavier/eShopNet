@@ -240,6 +240,7 @@
     <Content Include="Public\ProductServiceList.ashx" />
     <Content Include="Admin\UserServiceList.ashx" />
     <Content Include="Admin\OrderServiceList.ashx" />
+    <Content Include="Client\OrderServiceList.ashx" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Public\CartService.ashx" />
     <Content Include="Public\CatalogueService.ashx" />
@@ -477,6 +478,9 @@
     </Compile>
     <Compile Include="Client\OrderList.aspx.designer.cs">
       <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\OrderServiceList.ashx.cs">
+      <DependentUpon>OrderServiceList.ashx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>

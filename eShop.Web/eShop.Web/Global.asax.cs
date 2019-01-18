@@ -80,5 +80,10 @@ namespace eShop.Web
                 Server.Transfer("ErrorPage.aspx?handler=Application_Error%20-%20Global.asax", true);
             }
         }
+
+        protected void Session_Start(Object sender, EventArgs e)
+        {
+            Session["init"] = 0;
+        }
     }
 }
